@@ -19,7 +19,8 @@
   let isPlaying = false;
 
   const target = document.getElementById('target');
-  
+
+
 
   document.addEventListener('click', () => {
     if (isPlaying === true) {
@@ -48,6 +49,14 @@
       }
       setWord();
     }
+
+    let button = document.getElementById('reset');
+    function reload() {
+      button.addEventListener('click', () =>{
+        document.location.reload();
+      });
+    }
+    reload();
     
   });
 }
